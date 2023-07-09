@@ -1,4 +1,4 @@
-import { Stations } from "@/models/stations";
+import { PoliceStations } from '../../models/stations';
 import Link from 'next/link';
 
 async function getStations(){
@@ -11,14 +11,14 @@ async function getStations(){
 }
 
 export default async function Page(){
-    const stations: Stations = await getStations();
+    const stations: PoliceStations = await getStations();
 
 
     return (
         <div className="d-flex flex-column align-items-center">
             <div>polisstationer</div>
             <div className="flex flex-col gap-6">
-        {stations.map((item: Stations) => (
+        {stations.map((item: PoliceStations) => (
         <div key={item.id} className="border">
             <Link href={`/polisstationer/${item.id}`}>
                 <h1>{item.name}</h1>

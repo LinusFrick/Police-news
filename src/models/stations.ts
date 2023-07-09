@@ -1,4 +1,4 @@
-interface OpeningHour {
+export interface OpeningHour {
     name: string;
     date: string;
     isClosed: boolean;
@@ -6,7 +6,7 @@ interface OpeningHour {
     to: string;
 }
 
-interface Service {
+export interface Service {
     openingHours: OpeningHour[];
     name: string;
 }
@@ -16,7 +16,7 @@ interface Location {
     gps: string;
 }
 
-interface Stations {
+export interface PoliceStations {
     id: number;
     name: string;
     Url: string;
