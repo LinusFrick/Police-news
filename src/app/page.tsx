@@ -1,4 +1,4 @@
-import { SosEvent } from "@/models/sos-events";
+import { SosEvent } from "../models/sos-events";
 
 export default async function Home() {
   const events: SosEvent = await getData();
