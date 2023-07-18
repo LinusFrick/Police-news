@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation";
 import { PoliceStations } from "@/models/stations";
 
-async function GetStation(){
+const GetStation = async () => {
     const params = useParams();
     const id = params.id;
 
@@ -15,6 +15,7 @@ async function GetStation(){
 }
 
 export default async function Page(){
+    
     const data: PoliceStations  = await GetStation();
 
     return(
